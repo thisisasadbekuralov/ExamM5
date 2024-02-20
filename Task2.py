@@ -3,14 +3,13 @@ import threading
 
 # 2-masala 2- variant
 
-def main(a):
-    pdfkit.from_url(
-        base_url + str(a) + '/', 'sinonim' + str(a) + '.html', configuration=config)
-
-
 path_wkhtmltopdf = r"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
 config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
 base_url = 'https://tilshunos.com/sinonims/'
+
+def main(a):
+    pdfkit.from_url(
+        base_url + str(a) + '/', 'sinonim' + str(a) + '.html', configuration=config)
 
 
 threads = []
